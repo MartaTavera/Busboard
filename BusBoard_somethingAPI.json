@@ -1,0 +1,445 @@
+{
+    "$type": "Tfl.Api.Presentation.Entities.StopPointsResponse, Tfl.Api.Presentation.Entities",
+    "centrePoint": [
+        51.508,
+        -0.026
+    ],
+    "stopPoints": [
+        {
+            "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+            "naptanId": "490002083A",
+            "indicator": "Stop WX",
+            "stopLetter": "WX",
+            "modes": [
+                "bus"
+            ],
+            "icsCode": "1002083",
+            "stopType": "NaptanPublicBusCoachTram",
+            "stationNaptan": "490G02083A",
+            "lines": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                    "id": "135",
+                    "name": "135",
+                    "uri": "/Line/135",
+                    "type": "Line",
+                    "crowding": {
+                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                    },
+                    "routeType": "Unknown",
+                    "status": "Unknown"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                    "id": "277",
+                    "name": "277",
+                    "uri": "/Line/277",
+                    "type": "Line",
+                    "crowding": {
+                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                    },
+                    "routeType": "Unknown",
+                    "status": "Unknown"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                    "id": "d3",
+                    "name": "D3",
+                    "uri": "/Line/d3",
+                    "type": "Line",
+                    "crowding": {
+                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                    },
+                    "routeType": "Unknown",
+                    "status": "Unknown"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                    "id": "d7",
+                    "name": "D7",
+                    "uri": "/Line/d7",
+                    "type": "Line",
+                    "crowding": {
+                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                    },
+                    "routeType": "Unknown",
+                    "status": "Unknown"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                    "id": "n277",
+                    "name": "N277",
+                    "uri": "/Line/n277",
+                    "type": "Line",
+                    "crowding": {
+                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                    },
+                    "routeType": "Unknown",
+                    "status": "Unknown"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                    "id": "n550",
+                    "name": "N550",
+                    "uri": "/Line/n550",
+                    "type": "Line",
+                    "crowding": {
+                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                    },
+                    "routeType": "Unknown",
+                    "status": "Unknown"
+                }
+            ],
+            "lineGroup": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+                    "naptanIdReference": "490002083A",
+                    "stationAtcoCode": "490G02083A",
+                    "lineIdentifier": [
+                        "135",
+                        "277",
+                        "d3",
+                        "d7",
+                        "n277",
+                        "n550"
+                    ]
+                }
+            ],
+            "lineModeGroups": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineModeGroup, Tfl.Api.Presentation.Entities",
+                    "modeName": "bus",
+                    "lineIdentifier": [
+                        "135",
+                        "277",
+                        "d3",
+                        "d7",
+                        "n277",
+                        "n550"
+                    ]
+                }
+            ],
+            "status": true,
+            "id": "490002083A",
+            "commonName": "Westferry Station",
+            "distance": 101.83553124866926,
+            "placeType": "StopPoint",
+            "additionalProperties": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Direction",
+                    "key": "CompassPoint",
+                    "sourceSystemKey": "Naptan490",
+                    "value": "S"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Direction",
+                    "key": "Towards",
+                    "sourceSystemKey": "CountDown",
+                    "value": "Leamouth Or Island Gardens"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Facility",
+                    "key": "WiFi",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "no"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Geo",
+                    "key": "Zone",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "2"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "NearestPlaces",
+                    "key": "SourceSystemPlaceId",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "BikePoints_448"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "NearestPlaces",
+                    "key": "SourceSystemPlaceId",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "BikePoints_487"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "NearestPlaces",
+                    "key": "SourceSystemPlaceId",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "BikePoints_510"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "NearestPlaces",
+                    "key": "SourceSystemPlaceId",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "BikePoints_811"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "NearestPlaces",
+                    "key": "SourceSystemPlaceId",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "TaxiRank_5951"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "NearestPlaces",
+                    "key": "SourceSystemPlaceId",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "TaxiRank_5960"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "NearestPlaces",
+                    "key": "SourceSystemPlaceId",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "TaxiRank_5964"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "NearestPlaces",
+                    "key": "SourceSystemPlaceId",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "TaxiRank_5950"
+                }
+            ],
+            "children": [],
+            "lat": 51.508808,
+            "lon": -0.02669
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+            "naptanId": "490014459N",
+            "indicator": "Stop JP",
+            "stopLetter": "JP",
+            "modes": [
+                "bus"
+            ],
+            "stopType": "NaptanPublicBusCoachTram",
+            "lines": [],
+            "lineGroup": [],
+            "lineModeGroups": [],
+            "id": "490014459N",
+            "commonName": "Westferry Station",
+            "distance": 115.03992035431354,
+            "placeType": "StopPoint",
+            "additionalProperties": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Direction",
+                    "key": "CompassPoint",
+                    "sourceSystemKey": "Naptan490",
+                    "value": "N"
+                }
+            ],
+            "children": [],
+            "lat": 51.508822,
+            "lon": -0.027007
+        },
+        {
+            "$type": "Tfl.Api.Presentation.Entities.StopPoint, Tfl.Api.Presentation.Entities",
+            "naptanId": "490014459B",
+            "indicator": "Stop WK",
+            "stopLetter": "WK",
+            "modes": [
+                "bus"
+            ],
+            "icsCode": "1014459",
+            "stopType": "NaptanPublicBusCoachTram",
+            "stationNaptan": "490G000826",
+            "lines": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                    "id": "135",
+                    "name": "135",
+                    "uri": "/Line/135",
+                    "type": "Line",
+                    "crowding": {
+                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                    },
+                    "routeType": "Unknown",
+                    "status": "Unknown"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                    "id": "277",
+                    "name": "277",
+                    "uri": "/Line/277",
+                    "type": "Line",
+                    "crowding": {
+                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                    },
+                    "routeType": "Unknown",
+                    "status": "Unknown"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                    "id": "d3",
+                    "name": "D3",
+                    "uri": "/Line/d3",
+                    "type": "Line",
+                    "crowding": {
+                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                    },
+                    "routeType": "Unknown",
+                    "status": "Unknown"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                    "id": "d7",
+                    "name": "D7",
+                    "uri": "/Line/d7",
+                    "type": "Line",
+                    "crowding": {
+                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                    },
+                    "routeType": "Unknown",
+                    "status": "Unknown"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                    "id": "n277",
+                    "name": "N277",
+                    "uri": "/Line/n277",
+                    "type": "Line",
+                    "crowding": {
+                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                    },
+                    "routeType": "Unknown",
+                    "status": "Unknown"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.Identifier, Tfl.Api.Presentation.Entities",
+                    "id": "n550",
+                    "name": "N550",
+                    "uri": "/Line/n550",
+                    "type": "Line",
+                    "crowding": {
+                        "$type": "Tfl.Api.Presentation.Entities.Crowding, Tfl.Api.Presentation.Entities"
+                    },
+                    "routeType": "Unknown",
+                    "status": "Unknown"
+                }
+            ],
+            "lineGroup": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineGroup, Tfl.Api.Presentation.Entities",
+                    "naptanIdReference": "490014459B",
+                    "stationAtcoCode": "490G000826",
+                    "lineIdentifier": [
+                        "135",
+                        "277",
+                        "d3",
+                        "d7",
+                        "n277",
+                        "n550"
+                    ]
+                }
+            ],
+            "lineModeGroups": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.LineModeGroup, Tfl.Api.Presentation.Entities",
+                    "modeName": "bus",
+                    "lineIdentifier": [
+                        "135",
+                        "277",
+                        "d3",
+                        "d7",
+                        "n277",
+                        "n550"
+                    ]
+                }
+            ],
+            "status": true,
+            "id": "490014459B",
+            "commonName": "Westferry Station",
+            "distance": 141.9335152981242,
+            "placeType": "StopPoint",
+            "additionalProperties": [
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Direction",
+                    "key": "CompassPoint",
+                    "sourceSystemKey": "Naptan490",
+                    "value": "N"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "Direction",
+                    "key": "Towards",
+                    "sourceSystemKey": "CountDown",
+                    "value": "Aldgate, Mile End Or Wapping"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "NearestPlaces",
+                    "key": "SourceSystemPlaceId",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "BikePoints_448"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "NearestPlaces",
+                    "key": "SourceSystemPlaceId",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "BikePoints_487"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "NearestPlaces",
+                    "key": "SourceSystemPlaceId",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "BikePoints_510"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "NearestPlaces",
+                    "key": "SourceSystemPlaceId",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "BikePoints_811"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "NearestPlaces",
+                    "key": "SourceSystemPlaceId",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "TaxiRank_5951"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "NearestPlaces",
+                    "key": "SourceSystemPlaceId",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "TaxiRank_5960"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "NearestPlaces",
+                    "key": "SourceSystemPlaceId",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "TaxiRank_5964"
+                },
+                {
+                    "$type": "Tfl.Api.Presentation.Entities.AdditionalProperties, Tfl.Api.Presentation.Entities",
+                    "category": "NearestPlaces",
+                    "key": "SourceSystemPlaceId",
+                    "sourceSystemKey": "StaticObjects",
+                    "value": "TaxiRank_5950"
+                }
+            ],
+            "children": [],
+            "lat": 51.509161,
+            "lon": -0.026848
+        }
+    ],
+    "pageSize": 0,
+    "total": 0,
+    "page": 0
+}
