@@ -35,8 +35,6 @@ async function getPostcodeLatitudeLongitude() {
  const Buses =  await fetch(
   `https://api.tfl.gov.uk/StopPoint?stopTypes=NaptanPublicBusCoachTram&radius=500&lat=${latitude}&lon=${longitude}`)
   const result = await Buses.json();
-
-        console.log("Entries ", typeof (result));
         if (!result.stopPoints) {
           return;
         }
