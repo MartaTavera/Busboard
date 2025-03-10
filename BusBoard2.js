@@ -1,4 +1,3 @@
-//batter suggestion
 import fetch from 'node-fetch';
 import promptSync from 'prompt-sync';
 

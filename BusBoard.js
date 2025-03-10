@@ -2,7 +2,7 @@ import fetch from 'node-fetch';
 import promptSync from 'prompt-sync';
 
 const prompt = promptSync();
-//var result = prompt("Please enter a bus code  ");
+var result = prompt("Please enter a bus code  ");
 //console.log(result);
 let content = [];
 let selectedData = 0;
