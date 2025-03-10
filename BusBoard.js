@@ -29,7 +29,7 @@ async function getPostcodeLatitudeLongitude() {
       }
   }  return {latitude, longitude}; 
 }   
-  
+  //Step 2 : get bus stops in radius 
  async function busInRadius(latitude, longitude){
   try {
  const Buses =  await fetch(
@@ -45,19 +45,20 @@ async function getPostcodeLatitudeLongitude() {
         const stop1 = result.stopPoints[0].id;
         const stop2 = result.stopPoints[1].id;
         
-        return Promise.all([
+        const responses = Promise.all([
           fetch(`https://api.tfl.gov.uk/StopPoint/${stop1}/Arrivals`),
           fetch(`https://api.tfl.gov.uk/StopPoint/${stop2}/Arrivals`),
         ])
 
-          .then((responses) =>
-            Promise.all(responses.map((response) => response.json()))
-          )
+        const arrivals = await Promise.all((await responses).map(response => response.json()));
+        
 
-          .then((arrivals) => {
+          const sortedStop1Arrivals = arrivals[0].sort((a, b) => a.timeToStation - b.timeToStation);
+          const sortedStop2Arrivals = arrivals[1].sort((a, b) => a.timeToStation - b.timeToStation);
+
             console.log(`Next five buses at stop ${stop1} ${result.stopPoints[0].commonName} :`);
-            for (let i = 0; i < 5 && i < arrivals[0].length; i++) {
-              const bus = arrivals[0][i];
+            for (let i = 0; i < 5 && i < sortedStop1Arrivals.length; i++) {
+              const bus = sortedStop1Arrivals[i];
               const route = bus.lineName;
               const destination = bus.destinationName;
               const timeToArrival = Math.round(bus.timeToStation / 60);
@@ -66,15 +67,15 @@ async function getPostcodeLatitudeLongitude() {
               );
             }
             console.log(`Next five buses at stop ${stop2}  ${result.stopPoints[0].commonName}:`);
-            for (let i = 0; i < 5 && i < arrivals[1].length; i++) {
-              const bus = arrivals[1][i];
+            for (let i = 0; i < 5 && i <sortedStop2Arrivals.length; i++) {
+              const bus = sortedStop2Arrivals[i];
               const route = bus.lineName;
               const destination = bus.destinationName;
               const timeToArrival = Math.round(bus.timeToStation / 60);
               console.log(`Bus ${route} to ${destination} arriving in ${timeToArrival} minutes`
               );
             }
-          });
+          
         } catch (error) {
           console.error("Error fetching bus data:", error);
         }
