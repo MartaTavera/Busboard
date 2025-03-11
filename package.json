@@ -1,7 +1,15 @@
 {
+  "name": "busboard-web",
+  "version": "1.0.0",
+  "main": "server.js",
   "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
   "dependencies": {
+    "express": "^4.21.2",
     "node-fetch": "^3.3.2",
-    "prompt-sync": "^4.2.0"
+    "prompt-sync": "^4.2.0",
+    "ws": "^8.13.0"
   }
 }

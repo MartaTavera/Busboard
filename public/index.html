@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BusBoard CLI App</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xterm@5.1.0/css/xterm.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/xterm@5.1.0/lib/xterm.min.js"></script>
+    <style>
+        body { margin: 0; height: 100vh; background: #1e1e1e; }
+        #terminal-container { height: 100%; padding: 20px; }
+    </style>
+</head>
+<body>
+    <div id="terminal-container"></div>
+    <script>
+        const term = new Terminal({
+            cursorBlink: true,
+            theme: {
+                background: '#1e1e1e',
+                foreground: '#f0f0f0'
+            },
+            rows: 30
+        });
+        term.open(document.getElementById('terminal-container'));
+        term.writeln('Welcome to BusBoard CLI App!');
+        term.writeln('Type "help" to see available commands.');
+        term.writeln('Use "search [postcode]" to find buses near a location.');
+        
+        const socket = new WebSocket(`${location.protocol === 'https:' ? 'wss' : 'ws'}://${window.location.host}/terminal`);
+        
+        let command = '';
+ 
+        term.onData(data => {
+            if (data === '\r') { 
+                term.writeln('');
+                socket.send(command);
+                command = '';
+            } else if (data === '\u007F') { // Backspace
+                if (command.length > 0) {
+                    command = command.substr(0, command.length - 1);
+                    term.write('\b \b');
+                }
+            } else {
+                command += data;
+                term.write(data);
+            }
+        });
+        
+        socket.onmessage = function(event) {
+            term.writeln('\r\n' + event.data);
+            term.write('\r\n$ ');
+        };
+        
+        socket.onopen = function() {
+            term.write('$ ');
+        };
+    </script>
+</body>
+</html>
