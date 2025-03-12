@@ -18,7 +18,8 @@
                 background: '#1e1e1e',
                 foreground: '#f0f0f0'
             },
-            rows: 30
+            rows: 30,
+            cols:60,
         });
         term.open(document.getElementById('terminal-container'));
         term.writeln('Welcome to BusBoard CLI App!');
@@ -46,9 +47,14 @@
         });
         
         socket.onmessage = function(event) {
-            term.writeln('\r\n' + event.data);
-            term.write('\r\n$ ');
-        };
+    const lines = event.data.split('\n');
+    for (const line of lines) {
+        if (line.trim()) {
+            term.writeln(line);
+        }
+    }
+    term.write('\r\n$ ');
+};
         
         socket.onopen = function() {
             term.write('$ ');
